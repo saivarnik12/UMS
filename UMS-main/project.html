@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UMS Login</title>
+	<script type="text/javascript">
+		function validate()
+		{	
+			a=document.getElementById("i").value
+			if(a==""||a.length!=8||isNaN(a))
+			{
+				
+				alert("Please provide valid Registration number!");
+				document.getElementById("i").focus();
+				return false;
+			}
+			if(document.getElementById("j").value=="")
+			{
+				alert("Please provide your Password!")
+				document.getElementById("j").focus();
+				return false;
+			}
+			return true;
+		}
+	</script>
+	<style type="text/css">
+		body
+		{
+			background-image: url(1437140897_3.jpg);
+			background-size: cover;
+		}
+		form
+		{
+			margin-top: 80px;
+			width: 50%;
+			background: linear-gradient(green,orange);
+			height: 300px;
+		}
+		form:hover
+		{
+			background-color: transparent;
+	
+			background-size: cover;
+			transition: 1s linear;
+		}
+		#i{
+			width: 250px;
+			height: 30px;
+			background-color: white;
+		}
+		#j{
+			width: 250px;
+			height: 30px;
+			background-color: white;
+		}
+		#i:focus
+		{
+			background-color: orange;
+		}
+		#j:focus
+		{
+			background-color: orange;
+		}
+	</style>
+</head>
+<body onload="load()">
+<script type="text/javascript">
+	function load()
+	{
+		alert("WELCOME TO UMS")
+	}
+</script>
+	<center>
+<form onsubmit="return validate()" name="regform" action="project1.html">
+	<table>
+		<tr>
+			<td style="padding-left: 60px;"><img src="ums.png"></td>
+		</tr>
+		<tr>
+			<td><h1 style="color: brown;float: left;font-family: cooper;">UMS Login</h1></td>
+		</tr>
+		<tr>
+			<td><input type="username" name="username" placeholder="User ID" id="i" ></td>
+			<td><input type="password" name="password" placeholder="Password" id="j"></td>
+		</tr>
+		<tr>
+			<td><select id="i">
+				<option>HeadOffice</option>
+				<option>Telangana</option>
+				<option>Punjab</option>
+				<option>Haryana</option>
+				<option>Jammu & kashmir</option>
+			</select></td>
+		</tr><br>
+		<tr>
+			<center><td style="float: right;"><a href="project1.html"><input type="submit" value="Login" name="submit"style="border-radius: 100%;background-color: red;color: white;"></a></td>
+		</tr>
+	</table>
+</form></center>
+</body>
+</html>

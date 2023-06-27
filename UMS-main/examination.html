@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Examination Page</title>
+	<style type="text/css">
+		body
+		{
+			background-color: black;
+		}
+		#container
+		{
+			background-color: white;
+			width: 70%;
+			display: grid;
+			grid-template-areas: 
+			'a a a a a a'
+			'b b c c d d'
+			'e e e e e e'
+		}
+		#head
+		{
+			grid-area: a;
+			background-color: brown;
+			height: 70px;
+			color: white;
+		}
+		#left
+		{
+			grid-area:b;
+			background-color: silver;
+			height: 400px;
+		}
+		#right
+		{
+			grid-area: d;
+			background-color: red;
+			height: 400px;
+			color: white;
+		}
+		#middle
+		{
+			grid-area: c;
+			background-color: pink;
+			height: 400px;
+		}
+		#i
+		{
+			border-collapse: collapse;
+			text-align: center;
+		}
+		#d
+		{
+			height: 30px;
+			width: 100px;
+			background-color: white;
+		}
+		#h
+		{
+			background-color: brown;
+			color: white;
+		}
+		#d:hover{
+				background-color: yellow;
+		}
+		#bottom
+		{
+			background-color:  #d7d0c8;
+			height: 300px;
+			grid-area: e;
+			border: 2px solid silver;
+		}
+	</style>
+</head>
+<body><center>
+<form method="post" onsubmit="return (validate())" action="successful.html">
+	<div id="container">
+		<div id="head">
+			<img src="icon2.png" height="40px" width="40px">
+			<small style="font-size: 40px;">Examination</small>
+		</div>
+		<div id="left">
+			<div style="background-color: blue;height: 30px;border: 1px solid silver;color: white;">Seating Plan</div>
+			<div>
+				<table border="1" id="i">
+					<tr>
+						<th id="h">Course Code</th>
+						<th id="h">Date</th>
+					</tr>
+					<tr>
+						<td id="d">MTH166</td>
+						<td id="d">09-05-2019</td>
+					</tr>
+					<tr>
+						<td id="d">CSE202</td>
+						<td id="d">11-05-2019</td>
+					</tr>
+					<tr>
+						<td id="d">PEL131</td>
+						<td id="d">13-05-2019</td>
+					</tr>
+					<tr>
+						<td id="d">CHE110</td>
+						<td id="d">15-05-2019</td>
+					</tr>
+					<tr>
+						<td id="d">ECE213</td>
+						<td id="d">18-05-2019</td>
+					</tr>
+					<tr>
+						<td id="d">MEC107</td>
+						<td id="d">20-05-2019</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="middle">
+			<div style="background-color: blue;height: 30px;border: 1px solid silver;color: white;">Examination Registration</div>
+			<table>
+				<tr><th colspan="2">Student Info</th> </tr>
+				<tr>
+					<td>Name:</td>
+					<td>K.SAI VARNIK</td>
+				</tr>
+				<tr>
+					<td>Regd no:</td>
+					<td>11810720</td>
+				</tr>
+				<tr>
+					<td>Mobile no:</td>
+					<td>9381488080</td>
+				</tr>
+				<tr>
+					<td>program:</td>
+					<td>computer science</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="color: red;">No Records Found</td>
+				</tr>
+				<tr>
+					<td colspan="2"><a href="Registration.html"><input type="button" value="Registration form"></a></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="color: red;">Info::<br>Reappear Fee :350<br>Late Fee for reappear:500<br></td>
+				</tr>
+			</table>
+		</div>
+		<div id="right">
+			<div style="background-color: blue;height: 30px;border: 1px solid silver;color: white;">OMR Sheet Scrutiny</div>
+			<div>
+				<table>
+					<tr>
+						<td>Regno:</td>
+						<td>11810720</td>
+					</tr>
+					<tr>
+						<td>Name:</td>
+						<td>K.SAI VARNIK</td>
+					</tr>
+					<tr>
+						<td>Course:</td>
+						<td>
+							<select>
+								<option>--select--</option>
+							<option>PEL121</option>
+							<option>ECE131</option>
+							<option>MTH165</option>
+							<option>CSE101</option>
+							<option>PHY109</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td colspan="2"><a href="omr.html"><input type="button" value="Get the OMR"></a>
+					</tr>
+				</table><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<a href="Master Page.html"><input type="button" value="Back"></a>
+			</div>
+		</div>
+		<div id="bottom">
+			<h4><u style="font-size: 20px;">RMS Request</u></h4><br>
+			<select id="1">
+				<option value="-1">Select</option>
+				<option value="1">Suggestion</option>
+				<option value="2">Request</option>
+				<option value="3">Enquiry</option>
+				<option value="4">Feedback</option>
+			</select><br><br>
+			<select id="2">
+			<option value="-1">Department</option>
+			<option value="1">Academics</option>
+			<option value="2">BH-4(block A)</option>
+			<option value="3">BH-4(block B)</option>
+			<option value="4">BH-4(block C)</option>
+			<option value="5">BH-4(block D)</option>
+			<option value="6">BH-4(block E)</option>
+			</select><br><br>
+			<select id="3">
+				<option value="-1">Problem</option>
+				<option value="1">Geyser repair</option>
+				<option value="2">Walls repair</option>
+				<option value="3">Fan repair</option>
+				<option value="4">AC repair</option>
+			</select>
+			<a href="successful.html"><input type="submit" value="submit"></a>
+		</div>
+	</div>
+</form></center>
+<script type="text/javascript">
+	function validate()
+		{
+			if(document.getElementById("1").value=="-1")
+			{
+				alert("Please select the type");
+				return false;
+			}
+			if(document.getElementById("2").value=="-1")
+			{
+				alert("Please select the Department");
+				return false;
+			}
+			if(document.getElementById("3").value=="-1")
+			{
+				alert("Please select the Problem");
+				return false;
+			}
+			return true;
+		}
+</script>
+</body>
+</html>
